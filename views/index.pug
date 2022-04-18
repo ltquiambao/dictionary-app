@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .container.h-100
+    include ./components/navbar.pug
+    include ./components/loginModal.pug
+    include ./components/searchForm.pug
+    include ./components/searchResult.pug
+  script(type="module" src="/javascripts/index.js")

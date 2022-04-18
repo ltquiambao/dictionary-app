@@ -1,0 +1,10 @@
+// Modal
+#login-modal.modal.fade(tabindex='-1' aria-labelledby='loginModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5#login-modal-label.modal-title Login
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        #liveAlertPlaceholder
+        include loginForm.pug

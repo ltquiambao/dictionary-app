@@ -1,0 +1,60 @@
+// Login Form
+div
+  form#reg-form.needs-validation.visually-hidden(novalidate)
+    .row
+      // First Name
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-user.text-muted
+        input#regUsername.form-control(type='text' name='username' placeholder='Username')
+      // Email Address
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-envelope.text-muted
+        input#regEmail.form-control(type='email' name='email' placeholder='Email Address')
+      // Password
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-lock.text-muted
+        input#regPassword.form-control(type='password' name='password' placeholder='Password')
+        .invalid-feedback
+          | Password should contain a minimum of 8 characters.
+      // Password Confirmation
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-lock.text-muted
+        input#regPasswordConfirmation.form-control(type='password' name='passwordConfirmation' placeholder='Confirm Password')
+        .invalid-feedback
+          | Passwords do not match.
+      // Submit Button
+      .text-center.mb-3
+        button.btn.btn-primary.btn-block.py-2(type='submit') 
+          | Create your account
+      // Already Registered
+      .text-center.w-100
+        p.text-muted.font-weight-bold
+          | Already Registered? 
+          a.switch-form.text-primary.ml-2 Login
+  form#login-form.needs-validation(novalidate)
+    .row
+      // Email Address
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-envelope.text-muted
+        input#loginEmail.form-control(type='email' name='email' placeholder='Email Address')
+      // Password
+      .input-group.mb-3
+        span.input-group-text.input-group-text-custom
+          i.fa.fa-lock.text-muted
+        input#loginPassword.form-control(type='password' name='password' placeholder='Password')
+        .invalid-feedback
+          | Password should contain a minimum of 8 characters.
+      // Submit Button
+      .text-center.mb-3
+        button.btn.btn-primary.btn-block.py-2(type='submit') 
+          | Login
+      // New user
+      .text-center.w-100
+        p.text-muted.font-weight-bold
+          | New user? 
+          a.switch-form.text-primary.ml-2 Register
