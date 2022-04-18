@@ -1,6 +1,8 @@
 # dictionary-app
 
 ### Screenshots
+![screenshot_1](https://user-images.githubusercontent.com/46307552/163845392-5f2e96c4-3943-47f9-b5a9-6ee76a37b104.png)
+
 
 ### Quick start
 
