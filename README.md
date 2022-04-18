@@ -1,64 +1,49 @@
 # dictionary-app
 
-TODO:
+### Screenshots
 
-1. Create express app (server)
-2. Add a db folder
+### Quick start
 
-- Add mongodb uri to env file
-- create connect file to connect to mongodb via mongoose
-- connect before listening to app
+1. clone this repository in your local machine `git clone `
+2. go in the cloned repository `cd dictionary-app`
+3. install dependencies `npm install`
+4. add an environment file `.env`
 
-3. create a mongoose model for users
+- add 3 variables:
+  - MONGO_URI (your own MongoDB connection uri)
+  - JWT_ACCESS_TOKEN_SECRET
+  - DICT_API_KEY (your own API key from [Dictionary API](https://dictionaryapi.com))
 
-- model:
-  ```
-  User {
-    username
-    email
-    password
-  }
-  ```
+5. run the application `npm start`
+6. check your [localhost](http://localhost:3000)
 
-4. Add register and login endpoint
+### Technologies
 
-- /register
-  - create a new user using mongoose User model
-  - encrpyt password (optional)
-  - save to db
-  - return a token to browser
-- /login
-  - findOne user in db
-  - check if password is the same
-  - return a token to client
+- Front-end
+  - HTML
+  - CSS
+    - Bootstrap 5
+  - JavaScript
+    - JQuery
+- Back-end
+  - Node.js
+    - Express (Web app framework)
+    - Pug (Templating engine)
+    - Mongoose (Object modeling)
+    - JWT (Authentication)
+- Database
+  - MongoDB
+- External API
+  - [Dictionary API](https://dictionaryapi.com)
 
-5. Add api/v1 endpoint
+### Features
 
-- add verifyToken middleware
-- /dictionary
-  - check if existing in memory
-  - call dictionary api endpoint
-  - format response:
-    ```
-    {
-      uuid,
-      id: "heart",
-      def: [
-        "{bc}a structure in an {d_link|invertebrate|invertebrate} animal functionally analogous to the vertebrate heart",
-        "aasdasd"
-      ]
-      art: [
-        {
-          artid: "heart"
-          capt: "heart 1a: {it}1{\/it} aorta, {it}2{\/it} pulmonary artery,
-    {it}3{\/it} left atrium, {it}4{\/it} left ventricle, {it}5{\/it} right ventricle,
-    {it}6{\/it} right atrium"
-          arturl: https://www.merriam-webster.com/assets/mw/static/art/dict/[base filename].gif
-        }
-      ]
-    }
-    ```
-  - save to memory
-  - return response to client
+- Search meaning of words/phrases as a registered/logged in user
+- Register as a new user
+- Login as an existing user
 
-1. Create express app (front-end)
+### Backlog Features
+
+- Allow user log out
+- Encrpyt password before saving to database
+- Add refresh tokens
